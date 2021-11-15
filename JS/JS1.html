@@ -6,120 +6,26 @@
 </head>
 <body>
 <script>
-    // - Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10,
-    // -999, 123, 3.14, 2.7, 16, true, false.
-    //Вивести кожну змінну за допомогою: console.log , alert, document.write
-    // Переприсвоїти кожній змінній з завдання значення на довільне.
-    //     Вивести кожну змінну за допомогою: console.log , alert, document.write
-    // let a = 'Hello';
-    // let b = 'Owu';
-    // let c = 'com';
-    // let d = 'ua';
-    // let e = 1;
-    // let f = 10;
-    // let g = -999;
-    // let h = 123;
-    // let i = 3.14;
-    // let j = 16;
-    // let k = 5>4;
-    // let l = 5>6;
-    // a=b;
-    // b=c;
-    // c=d;
-    // d=e;
-    // e=f;
-    // f=g;
-    // g=h;
-    // h=i;
-    // i=j;
-    // j=k;
-    // k=l;
-    // l=a;
-    // console.log(a);
-    // console.log(b);
-    // console.log(c);
-    // console.log(d);
-    // console.log(e);
-    // console.log(f);
-    // console.log(g);
-    // console.log(h);
-    // console.log(i);
-    // console.log(j);
-    // console.log(k);
-    // console.log(l);
-    // alert(a);
-    // alert(b);
-    // alert(c);
-    // alert(d);
-    // alert(e);
-    // alert(f);
-    // alert(g);
-    // alert(h);
-    // alert(i);
-    // alert(j);
-    // alert(k);
-    // alert(l);
-    // document.write(a);
-    // document.write(b);
-    // document.write(c);
-    // document.write(d);
-    // document.write(e);
-    // document.write(f);
-    // document.write(g);
-    // document.write(h);
-    // document.write(i);
-    // document.write(j);
-    // document.write(k);
-    // document.write(l);
+    // Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить,
+    //     до якої четверті години попадає число
+    // (в першу, другу, третю или четверту частину години).
 
+    let hour= prompt('enter hour');
+    if (hour >=60){
+        document.write('<h1> not found </h1>')
 
-    // Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ.
-    //     З'єднати їх в одну змінну person. (Не об'єкт)
-    // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
-    //     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
+    } else if (hour >= 0 && hour < 15){
+        document.write('<h1> first part of the hour </h1>')
+    } else  if (hour >=15 && hour < 30){
+        document.write('<h1> second part of the hour </h1>')
+    } else  if (hour >= 30 && hour < 45){
+        document.write('<h1> third part of the year</h1>')
+    } else if (hour >= 45 && hour < 60){
+        document.write('<h1> fourth part of the year </h1>')
+    } else  if (hour = ''){
+        document.write('<h1> error </h1>')
+    }
 
-    // let person = {
-    //     firstName: 'Kolya',
-    //     middleName: 'Sol',
-    //     lastName: 'geufse',
-    //
-    // };
-    // console.log(person)
-    // let user = {
-    //     name: 'Vasya',
-    //     middleName: 'Ghjjnk',
-    //     age: 31,
-    // };
-    // let a = prompt('Вітаю ваше імя')
-    // let b = prompt('По батькові')
-    // let c = prompt('Тобі')
-    // console.log(user[a]);
-    // console.log(user[b]);
-    // console.log(user[c]);
-
-    // За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
-    //     let a = 100; let b = '100'; let c = true;
-
-    // let a = 100;
-    // let b = '100';
-    // let c = 'true';
-    // console.log(typeof (a));
-    // console.log(typeof (b));
-    // console.log(typeof (c));
-
-
-    // В однакових виразах не використовувати однакові оператори!!!
-    //     5 < 6 -> true
-    // 5 > 6 -> false
-    // 5 == 6 -> false
-    // 5 >= 6 -> false
-    // 10 == 10 -> true
-    // 10 === 10 -> true
-    // 10 > 10 -> false
-    // 10 < 10 -> false
-    // 10 >= 10 -> false
-    // 123 === '123' -> false
-    // 123 == '123' -> true
 
 </script>
 
