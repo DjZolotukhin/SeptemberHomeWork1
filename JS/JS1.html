@@ -6,180 +6,80 @@
 </head>
 <body>
 <script>
-    // --створити масив з:
-    //     - з 5 числових значень
-    // - з 5 стічкових значень
-    // - з 5 значень стрічкового, числового та булевого типу
-    // - та вивести його в консоль
+    // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 
-    // let num = [1, 2, 3, 213, 43];
-    // let text = [ 'hufih', 'hfuri', 'nfrjinfj', 'fbhryu', 'feuifh'];
-    // let oll = [true, 453, 'hfuei', false, 89];
-    //     console.log(num);
-    //     console.log(text);
-    //     console.log(oll);
+    function sRect(a,b){
+        return a * b;
+    }
 
+    // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
+    function sRound(r){
+        return Math.PI * Math.pow(r,2)
+    }
 
+    // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
-    // -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу.
-    // Вивести в консоль
-    // let mas = [];
-    // mas [0] = 'hufies';
-    // mas [1] = 'hsdf';
-    // mas [2] = 'sfs';
-    // mas [3] = 'hsfes';
-    // mas [4] = 10;
-    // console.log(mas);
+    function sCilindr(r,h){
+        return 2 * Math.PI * r * h;
+    }
 
+    // - створити функцію яка приймає масив та виводить кожен його елемент
 
-    // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
-
-    // for (let i=0; i<10; i++)
-    // {
-    //     document.write(`<div> bloc </div>`);
+    // function printArray(arr){
+    //     for (const item of arr){
+    //         console.log(item);
+    //     }
     // }
+    // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 
-    // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом
-    // і індексом всередині
+    function createP(text){
+        document.write(`<p> ${text} </p>`)
+    }
+    createP('dwueiahdo')
+    // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
-    // for (let i=0; i<10; i++)
-    // {
-    //     document.write(`<div>${i} bloc </div>`);
-    // }
+    function createUli(text, size){
+        document.write(`<ul>`);
+        for (let i=0; i<size; i++){
+            document.write(`<li>${text}</li>`);
+        }
+        document.write(`</ul>`);
+    }
+    createUli('jfrio',3);
+    // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
+    //     Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 
-    // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
+    function createUl2(text, size){
+        document.write(`<ul>`);
+        for (let i=0; i<size; i++){
+            document.write(`<li>${text}</li>`);
+        }
+        document.write(`</ul>`);
+    }
+    createUl2('jfrio',3);
 
-    // let i=0;
-    // while (i<20){
-    //     document.write(`<h> text</h>`);
-    //     i++
-    // }
+    // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві),
+    // та будує для них список
 
-    // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+    function printArray1(arr){
+        document.write(`<ul>`);
+        for (const item of arr){
+            document.write(`<li>${item}</li>`);
+        }
+        document.write(`</ul>`);
+    }
+    printArray1([true, 1, 'fhduei']);
 
-    // let i=0;
-    // while (i<20){
-    //     document.write(`<h>${i} - text</h>`);
-    //     i++
-    // }
+    // - створити функцію яка приймає масив обєктів з наступними полями id,name,age , та виводить їх в документ.
+    //     Для кожного обєкту окремий блок.
 
-
-    // - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
-
-    // let num = [1, 5, 89, 898, 6, 748, 48, 3, 9, 8];
-    // for (i = 0; i < num.length; i++) {
-    //     console.log(num[i])
-    // }
-
-
-    // - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
-
-    // let text = ['hud', 'jfiero', 'djeio', 'hfdueih', 'gdwy', 'hduwi', 'dfeui', 'jfdeiuo', 'jhdwiu', 'hduwi'];
-    // for (i = 0; i < text.length; i++) {
-    //     console.log(text[i])
-    // }
-    // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
-
-    // let text = ['hud', 'jfiero', 89, 898, 6, 748, 48, 'jfdeiuo', 'jhdwiu', 'hduwi'];
-    // for (i = 0; i < text.length; i++) {
-    //     console.log(text[i])
-    // }
-
-    // - Створити масив з 10 елементів числового, стірчкового і булевого типу.
-    // За допомогою if та typeof вивести тільки булеві елементи
-
-    let text = ['hud', 'jfiero', 89, 5>4, 6, 748, 48, 'jfdeiuo', 5<4, 'hduwi'];
-    for (i = 0; i < text.length; i++) {
-        if (typeof text[i] === 'boolean'){
-            console.log(text[i]);
+    function printArrayOfObject(arr){
+        for(const item of arr){
+            document.write(`<div>${item.id} - ${item.id} - ${item.age}</div>`);
         }
     }
 
-    // - Створити масив з 10 елементів числового, стірчкового і булевого типу.
-    // За допомогою if та typeof вивести тільки числові елементи
-
-    // let text = ['hud', 'jfiero', 89, true, 6, 748, 48, 'jfdeiuo', false, 'hduwi'];
-    // for (i = 0; i < text.length; i++) {
-    //     if (typeof text[i] === 'number'){
-    //        console.log(text[i]);
-    //     }
-    // }
-
-
-    // - Створити масив з 10 елементів числового, стрічкового і булевого типу.
-    // За допомогою if та typeof вивести тільки рядкові елементи
-
-    // let text = ['hud', 'jfiero', 89, true, 6, 748, 48, 'jfdeiuo', false, 'hduwi'];
-    // for (i = 0; i < text.length; i++) {
-    //     if (typeof text[i] === 'string'){
-    //         console.log(text[i]);
-    //     }
-    // }
-
-
-
-    // - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення
-    // до конкретних індексів. Вивести в консоль всі його елементи в циклі.
-
-    // let array = [];
-    // array[0] = 56;
-    // array[1] = 'jdfi';
-    // array[2] = 'jfdeuio';
-    // array[3] = 5<4;
-    // array[4] = 5>4;
-    // array[5] = 'hfekl';
-    // array[6] = '456';
-    // array[7] = 7848;
-    // array[8] = 84;
-    // array[9] = 'dfheui';
-    // for (let i = 0; i < array.length; i++){
-    //     console.log(array[i]);
-    // }
-
-    // - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log
-    // та document.write
-
-    // for (let i = 0; i < 10; i++) {
-    //     console.log('поточний крок циклу : ' + i + ' ');
-    //     document.write('поточний крок циклу : ' + i + ' ');
-    // }
-
-    // - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log
-    // та document.write
-
-    // for (let i = 0; i < 100; i++) {
-    //     console.log('поточний крок циклу : ' + i + ' ');
-    //     document.write('поточний крок циклу : ' + i + ' ');
-    // }
-
-    // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log
-    // та document.write
-
-    // for (let i = 0; i < 100; i+=2) {
-    //     console.log('поточний крок циклу : ' + i + ' ');
-    //     document.write('поточний крок циклу : ' + i + ' ');
-    // }
-
-
-    // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
-
-    // for (let i = 0; i < 100; i++) {
-    //     if(i % 2 === 0){
-    //         console.log('поточний крок циклу : ' + i + ' ');
-    //         document.write('поточний крок циклу : ' + i + ' ');
-    //     }
-
-
-    // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
-
-
-    // for (let i = 0; i < 100; i++) {
-    //     if(i % 2 === 1){
-    //         console.log('поточний крок циклу : ' + i + ' ');
-    //         document.write('поточний крок циклу : ' + i + ' ');
-    //     }
-    // }
 
 </script>
 
